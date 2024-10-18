@@ -1,0 +1,441 @@
+{
+	"info": {
+		"_postman_id": "a64cef1f-5cad-4ea9-8cc0-c864bc52bd8f",
+		"name": "creadit asia",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "34602913"
+	},
+	"item": [
+		{
+			"name": "register",
+			"item": [
+				{
+					"name": "register ADMIN",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"firstname\": \"Avazjon\",\r\n    \"lastname\": \"Abdurasulov\",\r\n    \"login\": \"Abdurasulov04\",\r\n    \"password\": \"Avazjon04\",\r\n    \"age\": 20,\r\n    \"from\": \"Toshkent\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:7777/register/registerAdmin",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "7777",
+							"path": [
+								"register",
+								"registerAdmin"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "register USER",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"firstname\": \"Farrux\",\r\n    \"lastname\": \"Karimov\",\r\n    \"login\": \"Kar1mov03\",\r\n    \"password\": \"Farux03\",\r\n    \"age\": 21,\r\n    \"from\": \"Toshkent\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:7777/register/registerUser",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "7777",
+							"path": [
+								"register",
+								"registerUser"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "login",
+			"item": [
+				{
+					"name": "login",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"login\": \"Abdurasulov04\",\r\n    \"password\": \"Avazjon04\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:7777/register/login",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "7777",
+							"path": [
+								"register",
+								"login"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "users",
+			"item": [
+				{
+					"name": "getAll",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:7777/users/getAll",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "7777",
+							"path": [
+								"users",
+								"getAll"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:7777/users/delete/66bf51b42f89b5f49a44d39d",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "7777",
+							"path": [
+								"users",
+								"delete",
+								"66bf51b42f89b5f49a44d39d"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"age\": 22\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:7777/users/update/66bf51b42f89b5f49a44d39d",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "7777",
+							"path": [
+								"users",
+								"update",
+								"66bf51b42f89b5f49a44d39d"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "categories",
+			"item": [
+				{
+					"name": "create",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NmMwOWJjNDljMWU3N2ZhNmFjNTZjN2QiLCJpYXQiOjE3MjM4OTg4Mzd9.gLccd3DtJSbosY-RYQbAkBhgUqYSXs0vTdQoWaKNgAM",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Phone\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:7777/categories/create",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "7777",
+							"path": [
+								"categories",
+								"create"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getALL",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NmMwOWJjNDljMWU3N2ZhNmFjNTZjN2QiLCJpYXQiOjE3MjM4OTg4Mzd9.gLccd3DtJSbosY-RYQbAkBhgUqYSXs0vTdQoWaKNgAM",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:7777/categories/getAll",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "7777",
+							"path": [
+								"categories",
+								"getAll"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update",
+					"request": {
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NmMwOWJjNDljMWU3N2ZhNmFjNTZjN2QiLCJpYXQiOjE3MjM4OTg4Mzd9.gLccd3DtJSbosY-RYQbAkBhgUqYSXs0vTdQoWaKNgAM",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Uy buyimlari\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:7777/categories/update/66c09d60c77fe14bd2489829",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "7777",
+							"path": [
+								"categories",
+								"update",
+								"66c09d60c77fe14bd2489829"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NmMwOWJjNDljMWU3N2ZhNmFjNTZjN2QiLCJpYXQiOjE3MjM4OTg4Mzd9.gLccd3DtJSbosY-RYQbAkBhgUqYSXs0vTdQoWaKNgAM",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:7777/categories/delete/66c09d97c77fe14bd2489842",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "7777",
+							"path": [
+								"categories",
+								"delete",
+								"66c09d97c77fe14bd2489842"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "commodities",
+			"item": [
+				{
+					"name": "create",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NmMwOWJjNDljMWU3N2ZhNmFjNTZjN2QiLCJpYXQiOjE3MjM4OTg4Mzd9.gLccd3DtJSbosY-RYQbAkBhgUqYSXs0vTdQoWaKNgAM",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Samsung S23 ultra\",\r\n    \"price\": \"1000$\",\r\n    \"video_card\": true,\r\n    \"amount\": \"150 ta\",\r\n    \"category_ids\": [\r\n        \"66c09eecb025c2169b15bcce\"\r\n    ]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:7777/commodities/create",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "7777",
+							"path": [
+								"commodities",
+								"create"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getAll",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NmMwOWJjNDljMWU3N2ZhNmFjNTZjN2QiLCJpYXQiOjE3MjM4OTg4Mzd9.gLccd3DtJSbosY-RYQbAkBhgUqYSXs0vTdQoWaKNgAM",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:7777/commodities/getAll",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "7777",
+							"path": [
+								"commodities",
+								"getAll"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "upadte",
+					"request": {
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NmMwOWJjNDljMWU3N2ZhNmFjNTZjN2QiLCJpYXQiOjE3MjM4OTg4Mzd9.gLccd3DtJSbosY-RYQbAkBhgUqYSXs0vTdQoWaKNgAM",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"acerrrr\",\r\n    \"price\": \"1750$\",\r\n    \"video_card\": true\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:7777/commodities/update/66c0a53a351fea9c455f000c",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "7777",
+							"path": [
+								"commodities",
+								"update",
+								"66c0a53a351fea9c455f000c"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NmMwOWJjNDljMWU3N2ZhNmFjNTZjN2QiLCJpYXQiOjE3MjM4OTg4Mzd9.gLccd3DtJSbosY-RYQbAkBhgUqYSXs0vTdQoWaKNgAM",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:7777/commodities/delete/66c0a53a351fea9c455f000c",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "7777",
+							"path": [
+								"commodities",
+								"delete",
+								"66c0a53a351fea9c455f000c"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
